@@ -1,0 +1,46 @@
+<mvc:View controllerName="devicerecognition.controller.Auswahl_Loschen"
+    xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" titleAlignment="Center" navButtonPress="onBack" showNavButton="true">
+        <content>
+		<VBox id="vBoxId1" alignItems="Center">
+		<FlexBox id="flex1" width="30%" justifyContent="Center" alignItems="Center">
+        <Table	id="tableId" mode="MultiSelect" items="{myAlias>/}" sticky="HeaderToolbar,InfoToolbar,ColumnHeaders" growing="true" growingThreshold="10" growingScrollToLoad="true" contextualWidth="auto">
+		<headerToolbar>
+			<Toolbar id="toolBarId">
+				<Title id="titleId" text="Multiple Stocks Deletion" level="H2"/>
+				<Text id="propertyTextId" visible="false" text="Zero"/>
+				<ToolbarSpacer id="toolBarSpacerId"/>
+				<!-- <CheckBox id="checkBoxId1" text="Strict Layout" select="onCheckBoxSelect"/> -->
+			</Toolbar>
+		</headerToolbar>
+		<columns>
+			<Column id="col1" width="12em">
+                <Text id="input1" text="Useful Unit"/>
+			</Column>
+			<Column id="col2" width="12em"> 
+                <Text id="input2" text="Device"/>
+			</Column>
+		</columns>
+		<items>
+			<ColumnListItem id="colList1" vAlign="Middle">
+				<cells>
+					<ObjectIdentifier id="text1" text="{myAlias>zznutzeinheit}"/>
+					<ObjectIdentifier id="text2" text="{myAlias>zzgernr}" />           
+        		</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+	</FlexBox>
+	<FlexBox id="flex2" width="30%" class="sapUiSmallMarginTop" justifyContent="SpaceBetween" alignItems="Center">
+                <Button id="backId1" type="Emphasized" text="Back"  press="onBack"/> 
+                <Button id="clearStockId1" type="Emphasized" text="Delete Selection" press="onSelectionClearance" ariaHasPopup="Dialog"/>
+				 <!-- <Button id="check" type="Emphasized" text="Check" press="ondeleteItems"/> -->
+	</FlexBox>
+	</VBox>
+	
+        </content>
+    </Page>
+</mvc:View>
+ 

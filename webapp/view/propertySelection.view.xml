@@ -1,0 +1,18 @@
+<mvc:View controllerName="devicerecognition.controller.propertySelection"
+    xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+        <VBox id="homeVBoxId" class="sapUiTinyMarginTop" alignItems="Center" justifyContent="Center">
+        <Input
+			id="myInput"
+			placeholder="Enter property number"
+			showValueHelp="true"
+        >
+		</Input>
+        <Button id="screenOneId" type="Emphasized" text="{i18n>continue}" press="onPressNavigationForward" class="sapUiSmallMarginTop"/>
+        
+        </VBox>
+        </content>
+    </Page>
+</mvc:View>

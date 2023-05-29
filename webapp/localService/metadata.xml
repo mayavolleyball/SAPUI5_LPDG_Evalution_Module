@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+    <edmx:DataServices m:DataServiceVersion="2.0">
+        <Schema Namespace="Z_BEWERTUNG_SRV" xml:lang="de" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+            <EntityType Name="bewqueue" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="tplnr"/>
+                </Key>
+                <Property Name="mandt" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Mandant" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="point" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Meßpunkt" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="gueltigbis" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Gültig bis" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="gueltigab" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Gültig ab" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="lnr" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="lfdNr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="tplnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Techn. Platz" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="nutznr" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="NUNR" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zznutznr" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="NUNR" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzschkz" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Schätzung manuell" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzindct" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Zähler" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="schwt" Type="Edm.Decimal" Nullable="false" Precision="10" Scale="2" sap:unicode="false" sap:label="Schätzwert" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzbewfakt" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="3" sap:unicode="false" sap:label="Bewertungsfaktor" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzimpulsw" Type="Edm.String" Nullable="false" MaxLength="7" sap:unicode="false" sap:label="Impulswertigkeit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="dlghost" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="DienstLeistGr (Host)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="fotonr" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="FotoNr Heizkörp" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="abwmont" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Abw.Mont." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="fernfuehler" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Fernfühler" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="buegelmont" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Bügelmontage" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="lanzenvent" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Lanzenventil" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="hexanol" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Hexanol" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="istaadapter" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="ISTA-Adapter" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="anmerkzumont" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Anmerkung zur Mont." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="aufmfehlerart" Type="Edm.String" Nullable="false" MaxLength="7" sap:unicode="false" sap:label="AufmFehlArt" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="aufmfehlsonst" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="AufmFehlSo" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="fehlflg" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Fehler Bewertung" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="hkgrup" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Gruppe" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="indabw" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Ind. abw. KcWert" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="gnr2" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="HerstSerialNr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="teilggem" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="0" sap:unicode="false" sap:unit="meinh" sap:label="SegmentL g." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="langgem" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="0" sap:unicode="false" sap:unit="meinh" sap:label="Baulänge gem." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="hoehegem" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="0" sap:unicode="false" sap:unit="meinh" sap:label="Bauhöhe gem." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="tiefegem" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="0" sap:unicode="false" sap:unit="meinh" sap:label="Bautiefe gem." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="meinh" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Mengeneinheit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/>
+                <Property Name="anzgldgem" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Anzahl Glieder" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="multi1gem" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Feld 1 gem." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="multi2gem" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Feld 2 gemessen" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="multi3gem" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Feld 3 gemessen" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="multi4gem" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Feld 4 gemessen" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="multi5gem" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Feld 5 gemessen" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="multi6gem" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Feld 6 gemessen" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="multi7gem" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Feld 7 gemessen" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="anartgem" Type="Edm.String" Nullable="false" MaxLength="7" sap:unicode="false" sap:label="Anschl.Art Nr g" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="kcluftgem" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="3" sap:unicode="false" sap:label="Kc-Faktor Luft" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="korrgem" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="3" sap:unicode="false" sap:label="KorrFaktor (LA)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="herstlbew" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="HerstellerNr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="herstlgem" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="HerstellerNrSP" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="hknummerbew" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="MNummer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="modelnrbew" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="ModelNr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ausfuehrungbew" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Ausführung" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="teilgbew" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="0" sap:unicode="false" sap:unit="meinh" sap:label="SegmentL" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="langbew" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="0" sap:unicode="false" sap:unit="meinh" sap:label="Baulänge" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="hoehebew" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="0" sap:unicode="false" sap:unit="meinh" sap:label="Bauhöhe" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="tiefebew" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="0" sap:unicode="false" sap:unit="meinh" sap:label="Bautiefe" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="anzgldbew" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Anzahl Glieder" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="multi1bew" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Feld 1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="multi2bew" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Feld 2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="multi3bew" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Feld 3" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="multi4bew" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Feld 4" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="exponebew" Type="Edm.Decimal" Nullable="false" Precision="4" Scale="1" sap:unicode="false" sap:label="Exponent" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="hzlstgbew" Type="Edm.Decimal" Nullable="false" Precision="7" Scale="0" sap:unicode="false" sap:label="Heizleist. (W)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="kcfaktbew" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="3" sap:unicode="false" sap:label="Kc-Faktor" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="aafaktbew" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="3" sap:unicode="false" sap:label="Fakt. abw. AnArt" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="bwfaktbew" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="3" sap:unicode="false" sap:label="BewFaktor (1.G)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="bwfkt2bew" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="3" sap:unicode="false" sap:label="BewFaktor (2.G.)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="cwraumbew" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="3" sap:unicode="false" sap:label="C-Wert Raumfühler" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="cwhzkpbew" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="3" sap:unicode="false" sap:label="C-Wert Heizkörper" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="anartbew" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Anschl.Art Nr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="toltlg" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:unicode="false" sap:unit="meinh" sap:label="Teilung SegLänge" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="tollng" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:unicode="false" sap:unit="meinh" sap:label="Baulänge (Tol.)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="tolhoe" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:unicode="false" sap:unit="meinh" sap:label="Bauhöhe (Tol.)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="toltfe" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:unicode="false" sap:unit="meinh" sap:label="Bautiefe (Tol.)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="tfktlg" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:unicode="false" sap:unit="meinh" sap:label="Teilung SegLänge" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="tfklng" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:unicode="false" sap:unit="meinh" sap:label="Baulänge (Tol.)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="tfkhoe" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:unicode="false" sap:unit="meinh" sap:label="Bauhöhe (Tol.)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="tfktfe" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:unicode="false" sap:unit="meinh" sap:label="Bautiefe (Tol.)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="tfkges" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:unicode="false" sap:unit="meinh" sap:label="Gesamttoleranz" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="bewdat" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Bewertungsdatum" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="sabnr" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Sachbearbeiter" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="bewtyp" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Bewertungstyp" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="fehln1" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Fehlernummer (1)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="fehln2" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Fehlernummer (2)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="fehln3" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Fehlernummer (3)" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="textn1" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Textnummer 1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="textn2" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Textnummer 2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="textn3" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Textnummer 3" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="textn4" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Textnummer 4" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="textn5" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Textnummer 5" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="textn6" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Textnummer 6" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzbegehrf" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="BegehReihFolge" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzbegrfghh" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Begehungsrf. Tablet" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzgernr" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Gerätenummer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzgertyp" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="G-Typ" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzfabr" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Fabrikat" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzmatnr" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Material" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzequnr" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Equipment" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzskal" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Skala" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzsttg" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Stichtag" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzminodatpoint" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="MP des zugeordn. FDS" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzfunkgerart" Type="Edm.String" Nullable="false" MaxLength="7" sap:unicode="false" sap:label="Funkgeräteart" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzimpdiv" Type="Edm.String" Nullable="false" MaxLength="9" sap:unicode="false" sap:label="Divisor Impulsw" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzimpvbrtyp" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="VerbrEinh Impw" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false" sap:semantics="unit-of-measure"/>
+                <Property Name="zzeinbzst" Type="Edm.Decimal" Nullable="false" Precision="12" Scale="4" sap:unicode="false" sap:label="Einbau-Zählerst." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzprzvjne" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2" sap:unicode="false" sap:label="Prozent VorJahresver" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzprzvjlg" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2" sap:unicode="false" sap:label="Prozent VorJverbr LG" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzfunk" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Funkgerät" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzgerkzk" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="GerKKz" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzdlg" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="DienstLeistGr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzdlgverw" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="DLG-Verwendung" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzmaufnr" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Maufnr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzpointvorg" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Vorgänger MP" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzpointnachf" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Nachfolger MP" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzbegljahr" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="Beglaubigungsjahr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzaufn" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Aufnahme o. Montage" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzmontart" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Montage Art" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzdin" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Nach DIN Norm instal" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzartbegljahr" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Verwendung Begljahr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzgerid" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="HerstSerialNr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzeinbausituation" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Einbausituation" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzventiltausch" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Absperrventil getaus" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzuvi" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Datum UVI-Fähigkeit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzeinbimpw" Type="Edm.String" Nullable="false" MaxLength="7" sap:unicode="false" sap:label="Einbau-Impulsw." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzanzfuehl" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Anzahl Fühler" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zztplnr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="Techn. Platz" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zznutzeinheit" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="Nutzeinheit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzraum" Type="Edm.String" Nullable="false" MaxLength="7" sap:unicode="false" sap:label="Raum" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzstort" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Zähl.Stort" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzeinbaula" Type="Edm.String" Nullable="false" MaxLength="7" sap:unicode="false" sap:label="Einbaulage" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzeinbauort" Type="Edm.String" Nullable="false" MaxLength="7" sap:unicode="false" sap:label="Einbauort" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzfunkid" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Funk-Identif." sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zznrkund" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="GeräteNr Kunde" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzprdein" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Produkt oder Einheit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzminotkontpoint" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="MP MinoKontakt" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzminokanal" Type="Edm.String" Nullable="false" MaxLength="7" sap:unicode="false" sap:label="Minotel Kanal" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzschaetzm" Type="Edm.String" Nullable="false" MaxLength="7" sap:unicode="false" sap:label="Schätzmethode" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzheizpatr" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Kz. Heizpatrone" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzfremdger" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Kz. Fremdgerät" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzfunkaltneu" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Kz. Funk alt/neu" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzrederfakt" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="3" sap:unicode="false" sap:label="Red./Erh.-Faktor" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzmultyp" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Multiplik. Typ" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzgerstat" Type="Edm.String" Nullable="false" MaxLength="7" sap:unicode="false" sap:label="Geräte Status" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzmondat" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Montagedatum" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzvbelndl" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="DL-VertragsNr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzvbelnposdl" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="DLV PosNr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzvbelnmw" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="MW-VertragsNr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzvbelnposmw" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="MWV PosNr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzausbgernr" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="Gerätenummer des ausgebauten Kundengeräts" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzendst" Type="Edm.Decimal" Nullable="false" Precision="10" Scale="2" sap:unicode="false" sap:label="Endstand" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzkfeldval1" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="KundFeld1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzkfeldval2" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="KundFeld2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzkfeldval3" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="KundFeld3" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzkfeldval4" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="KundFeld4" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzkfeldval5" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="KundFeld5" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="erdat" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Angelegt am" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="erzet" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Uhrzeit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ernam" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Angelegt von" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="aedat" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Geändert am" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="aezet" Type="Edm.Time" Precision="0" sap:unicode="false" sap:label="Änderungszeit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="aenam" Type="Edm.String" MaxLength="12" sap:unicode="false" sap:label="Geändert von" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="zzlafakt" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="3" sap:unicode="false" sap:label="LA Faktor" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="gertyp" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Gerätetyp" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="lg" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="tplnr"/>
+                </Key>
+                <Property Name="tplnr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Liegenschaft" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <NavigationProperty Name="suggestions" Relationship="Z_BEWERTUNG_SRV.lgToSuggestions" FromRole="FromRole_lgToSuggestions" ToRole="ToRole_lgToSuggestions"/>
+                <NavigationProperty Name="pictures" Relationship="Z_BEWERTUNG_SRV.lgToPictures" FromRole="FromRole_lgToPictures" ToRole="ToRole_lgToPictures"/>
+                <NavigationProperty Name="messages" Relationship="Z_BEWERTUNG_SRV.lgToMessages" FromRole="FromRole_lgToMessages" ToRole="ToRole_lgToMessages"/>
+                <NavigationProperty Name="bewtype" Relationship="Z_BEWERTUNG_SRV.lgToBewtype" FromRole="FromRole_lgToBewtype" ToRole="ToRole_lgToBewtype"/>
+                <NavigationProperty Name="bewqueue" Relationship="Z_BEWERTUNG_SRV.lgToBewqueue" FromRole="FromRole_lgToBewqueue" ToRole="ToRole_lgToBewqueue"/>
+            </EntityType>
+            <EntityType Name="suggestions" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="tplnr"/>
+                </Key>
+                <Property Name="tplnr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Liegenschaft" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="point" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="Meßpunkt" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="lnr" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="lfdNr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="toleranzstufe" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Toleranz" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="platzierung" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Platzierung" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="aufmassdatum" Type="Edm.DateTime" Precision="7" sap:unicode="false" sap:label="Aufmassdatum" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="modelnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="ModelNr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="hersteller" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="HerstellerNr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="hknummer" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="MNummer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="toleranzsegment" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:unicode="false" sap:label="Toleranz Teilung" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="tolwertigsegment" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:unicode="false" sap:label="Faktor Tlg" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="segment" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="0" sap:unicode="false" sap:label="SegmentL" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="toleranzgliedz" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:unicode="false" sap:label="Toleranz GZ" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="gliederzahl" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="Anzahl Glieder" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="fki" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="FKI" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="anschlussart" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="Anschl.Art Nr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="ausfuehrungsnr" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Ausführung" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="tolwertiglaenge" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:unicode="false" sap:label="Faktor Länge" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="toleranzlaenge" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:unicode="false" sap:label="Toleranz Länge" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="baulaenge" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="0" sap:unicode="false" sap:label="Baulänge" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="toleranzbh" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:unicode="false" sap:label="Toleranz BH" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="tolwertigbh" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:unicode="false" sap:label="Faktor BH" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="bauhoehe" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="0" sap:unicode="false" sap:label="Bauhöhe" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="toleranzbt" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:unicode="false" sap:label="Toleranz BT" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="tolwertigbt" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="0" sap:unicode="false" sap:label="Faktor BT" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="bautiefe" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="0" sap:unicode="false" sap:label="Bautiefe" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="leistung" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="Leistung" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="feld1" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Feld 1" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="feld2" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Feld 2" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="feld3" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Feld 3" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="feld4" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Feld 4" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="abweichung" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Gesamtabweichung" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="meinh" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Unit" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="kca" Type="Edm.Decimal" Nullable="false" Precision="3" Scale="2" sap:unicode="false" sap:label="KCa" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="hkname" Type="Edm.String" Nullable="false" MaxLength="80" sap:unicode="false" sap:label="HK Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="schrittweite" Type="Edm.Int16" Nullable="false" sap:unicode="false" sap:label="SchrittW" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="messages" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="tplnr"/>
+                </Key>
+                <Property Name="tplnr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Liegenschaft" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="type" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="Nachrichtentyp" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="id" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Nachrichtenklasse" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="number" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="Nachrichtennummer" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="message" Type="Edm.String" Nullable="false" MaxLength="220" sap:unicode="false" sap:label="Meldungstext" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="logno" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="Protokollnr" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="logmsgno" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="NrMeldung" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="messagev1" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Nachrichtenvariable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="messagev2" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Nachrichtenvariable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="messagev3" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Nachrichtenvariable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="messagev4" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="Nachrichtenvariable" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="parameter" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="Parametername" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="row" Type="Edm.Int32" Nullable="false" sap:unicode="false" sap:label="Parameterzeile" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="field" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="Feldname" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="system" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="Logisches System" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="pictures" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="tplnr"/>
+                </Key>
+                <Property Name="tplnr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Liegenschaft" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="fotonr" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="FotoNr Heizkörp" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <EntityType Name="bewtype" sap:content-version="1">
+                <Key>
+                    <PropertyRef Name="tplnr"/>
+                </Key>
+                <Property Name="tplnr" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Liegenschaft" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="matLg" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Mat Liegenschaft" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="matBew" Type="Edm.String" Nullable="false" sap:unicode="false" sap:label="Mat Bewertung" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+                <Property Name="produktskala" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="Produktskala" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            </EntityType>
+            <Association Name="lgToBewtype" sap:content-version="1">
+                <End Type="Z_BEWERTUNG_SRV.lg" Multiplicity="1" Role="FromRole_lgToBewtype"/>
+                <End Type="Z_BEWERTUNG_SRV.bewtype" Multiplicity="1" Role="ToRole_lgToBewtype"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_lgToBewtype">
+                        <PropertyRef Name="tplnr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_lgToBewtype">
+                        <PropertyRef Name="tplnr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="lgToMessages" sap:content-version="1">
+                <End Type="Z_BEWERTUNG_SRV.lg" Multiplicity="1" Role="FromRole_lgToMessages"/>
+                <End Type="Z_BEWERTUNG_SRV.messages" Multiplicity="*" Role="ToRole_lgToMessages"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_lgToMessages">
+                        <PropertyRef Name="tplnr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_lgToMessages">
+                        <PropertyRef Name="tplnr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="lgToPictures" sap:content-version="1">
+                <End Type="Z_BEWERTUNG_SRV.lg" Multiplicity="1" Role="FromRole_lgToPictures"/>
+                <End Type="Z_BEWERTUNG_SRV.pictures" Multiplicity="*" Role="ToRole_lgToPictures"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_lgToPictures">
+                        <PropertyRef Name="tplnr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_lgToPictures">
+                        <PropertyRef Name="tplnr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="lgToSuggestions" sap:content-version="1">
+                <End Type="Z_BEWERTUNG_SRV.lg" Multiplicity="1" Role="FromRole_lgToSuggestions"/>
+                <End Type="Z_BEWERTUNG_SRV.suggestions" Multiplicity="*" Role="ToRole_lgToSuggestions"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_lgToSuggestions">
+                        <PropertyRef Name="tplnr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_lgToSuggestions">
+                        <PropertyRef Name="tplnr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <Association Name="lgToBewqueue" sap:content-version="1">
+                <End Type="Z_BEWERTUNG_SRV.lg" Multiplicity="1" Role="FromRole_lgToBewqueue"/>
+                <End Type="Z_BEWERTUNG_SRV.bewqueue" Multiplicity="*" Role="ToRole_lgToBewqueue"/>
+                <ReferentialConstraint>
+                    <Principal Role="FromRole_lgToBewqueue">
+                        <PropertyRef Name="tplnr"/>
+                    </Principal>
+                    <Dependent Role="ToRole_lgToBewqueue">
+                        <PropertyRef Name="tplnr"/>
+                    </Dependent>
+                </ReferentialConstraint>
+            </Association>
+            <EntityContainer Name="Z_BEWERTUNG_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx">
+                <EntitySet Name="bewqueueSet" EntityType="Z_BEWERTUNG_SRV.bewqueue" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="lgSet" EntityType="Z_BEWERTUNG_SRV.lg" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="suggestionsSet" EntityType="Z_BEWERTUNG_SRV.suggestions" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="messagesSet" EntityType="Z_BEWERTUNG_SRV.messages" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="picturesSet" EntityType="Z_BEWERTUNG_SRV.pictures" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+                <EntitySet Name="bewtypeSet" EntityType="Z_BEWERTUNG_SRV.bewtype" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
+                <AssociationSet Name="lgToBewqueueSet" Association="Z_BEWERTUNG_SRV.lgToBewqueue" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="lgSet" Role="FromRole_lgToBewqueue"/>
+                    <End EntitySet="bewqueueSet" Role="ToRole_lgToBewqueue"/>
+                </AssociationSet>
+                <AssociationSet Name="lgToSuggestionsSet" Association="Z_BEWERTUNG_SRV.lgToSuggestions" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="lgSet" Role="FromRole_lgToSuggestions"/>
+                    <End EntitySet="suggestionsSet" Role="ToRole_lgToSuggestions"/>
+                </AssociationSet>
+                <AssociationSet Name="lgToBewtypeSet" Association="Z_BEWERTUNG_SRV.lgToBewtype" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="lgSet" Role="FromRole_lgToBewtype"/>
+                    <End EntitySet="bewtypeSet" Role="ToRole_lgToBewtype"/>
+                </AssociationSet>
+                <AssociationSet Name="lgToPicturesSet" Association="Z_BEWERTUNG_SRV.lgToPictures" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="lgSet" Role="FromRole_lgToPictures"/>
+                    <End EntitySet="picturesSet" Role="ToRole_lgToPictures"/>
+                </AssociationSet>
+                <AssociationSet Name="lgToMessagesSet" Association="Z_BEWERTUNG_SRV.lgToMessages" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
+                    <End EntitySet="lgSet" Role="FromRole_lgToMessages"/>
+                    <End EntitySet="messagesSet" Role="ToRole_lgToMessages"/>
+                </AssociationSet>
+            </EntityContainer>
+            <atom:link rel="self" href="http://mind38ci.minol.org:8017/sap/opu/odata/sap/Z_BEWERTUNG_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <atom:link rel="latest-version" href="http://mind38ci.minol.org:8017/sap/opu/odata/sap/Z_BEWERTUNG_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

@@ -1,0 +1,25 @@
+<mvc:View controllerName="devicerecognition.controller.Vorrat_Loschen"
+    xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" titleAlignment="Center" navButtonPress="onBack" showNavButton="true">
+        <content>
+        <VBox id="vBoxId1" alignContent="Stretch" alignItems="Center" class="sapUiSmallMarginTop">
+        <!-- <Title id="vorratTitleId" text="{i18n>subTitleThree}" class="sapUiSmallMarginTop"></Title> -->
+        	<RadioButtonGroup id="radioButtonGroup1" columns="2" width="100%" select=".changeRegion">
+			    <RadioButton id="radioButtonOneId1" text="{i18n>clearStock}" selected="true" class="sapUiSmallMarginEnd"/>
+			    <RadioButton  id="radioButtonTwoId1" text="{i18n>deleteDevices}" class="sapUiSmallMarginBeginEnd"/>
+			</RadioButtonGroup>
+            <HBox id="hBoxTwoId1" class="sapUiTinyMarginTop" alignContent="Start" justifyContent="SpaceBetween">
+                <Button id="backId1" type="Emphasized" text="Back" class="sapUiMediumMarginEnd" press="onBack"/> 
+                <Button id="clearStockId1" type="Emphasized" text="Delete Queue" class="sapUiMediumMarginEnd" press="onQueueClearance" ariaHasPopup="Dialog"/>
+                <Button id="forwardId1" type="Emphasized" text="Continue" visible="false" class="sapUiMediumMarginEnd" press="onContinue"/>
+                <Text id="propertyTextId" visible="false" text="Zero"/>
+                <!-- <Button id="check" text="check" press="onPress"/> -->
+                <!-- <Text id="myId" text="{tplnr}"/> -->
+            </HBox>
+            </VBox>
+        </content>
+    </Page>
+</mvc:View>
+ 
